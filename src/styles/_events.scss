@@ -1,0 +1,73 @@
+@use 'variables';
+
+.event{
+    padding: 80px 0;
+    
+
+    &--front-end{
+    background-image: linear-gradient(to bottom, variables.$cor001, variables.$cor002);
+    color:variables.$textColorSecundary;
+
+    }
+    &--ux-ui{
+    background-image: linear-gradient(to bottom, variables.$cor002, variables.$cor003);
+    color: variables.$textColorSecundary;
+
+    }
+    &--data-science{
+        background-image: linear-gradient(to bottom, variables.$cor003, variables.$cor004);
+        color: variables.$textColorSecundary;
+    
+        }
+
+    &--back-end{
+        background-image: linear-gradient(to bottom, variables.$cor004, variables.$cor003);
+        color: variables.$textColorSecundary;
+    
+        }
+
+        &--image-left{
+            .container{
+                flex-direction: row-reverse;
+            }
+        }
+    
+    .container{
+        display: flex; 
+        gap: 40px;
+    }
+
+    &__image{
+        max-width: 360px;
+    }
+
+    &__datail{      
+       
+        &__title{
+            font-size: 18px;
+            font-weight: bold;  
+            margin-bottom: 16px;         
+        }
+
+        &__description{
+            line-height: 22px;
+            font-size: 16px;
+            
+        }
+    }
+
+    @media (max-width:640px) {
+        .container{
+         display: block;
+        }
+
+         &__datail{      
+             margin-right: 0px;
+             margin-bottom: 16px;
+         }
+
+         &__image{
+             width: 100%;
+         }
+     }  
+}

@@ -1,0 +1,45 @@
+@use '../variables';
+
+.infos{
+    background-color: #fff;
+    padding:16px 24px;
+    display: flex;
+    justify-content: space-between;
+
+    &__list{
+        display: flex;
+        gap: 40px;
+
+        &__item{
+            font-size: 14px;
+            color: variables.$textColorSecundary;
+            margin-bottom: 8px;
+            b{
+                font-size: 18px;
+                display: block;
+                color: variables.$textColorSecundary;
+            }
+        }
+    }
+
+    @media (max-width:640px) {
+        display: block;
+
+        &__list{
+            display: block;
+
+            &__item{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @media (max-width:640px) {
+        &__list{
+            gap: 16px;
+        }   
+       
+    }
+
+
+}

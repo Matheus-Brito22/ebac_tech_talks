@@ -1,0 +1,26 @@
+@use '../variables';
+
+.button{
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;   
+    white-space: nowrap;
+    cursor: pointer;
+
+    &--primary{
+        color: #fff;
+        background-color: variables.$corBotaoPrimary;
+    }
+    @media (max-width:640px) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+    }
+
+    @media (max-width:1024px) {
+       display: flex;
+       align-items: center;   
+      
+    }
+}
